@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk')
-AWS.config.region = 'us-west-1'
+AWS.config.region = 'eu-west-1'
 const dynamodb = new AWS.DynamoDB.DocumentClient()
 require('dotenv').config()
 
@@ -60,3 +60,4 @@ const req = {
 dynamodb.batchWrite(req).promise()
   .then(() => console.log("all done"))
   .catch(err => console.error(err))
+  
